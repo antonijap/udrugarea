@@ -1,0 +1,44 @@
+---
+title: Udruga Rea | Blog
+---
+<section class="blog">
+	<div class="expanded row title">
+		<div class="columns">
+			<h2 class="text-center">Blog</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="columns">
+			<% blog('blog').articles.each do |article| %>
+			
+			<article>
+				<a href="<%= article.url %>"><img src="<%= article.data.image %>" alt="<%= article.title %>"></a>
+				<div class="blog-info">
+					<h3><a href="<%= article.url %>"><%= article.title %></a></h3>
+					<time>Datum: <%= article.date.strftime("%d.%m.%Y.") %></time>
+					<span class="author">Autor: <%= article.data.author %></span>
+					<p>
+						<%= article.summary %>
+					</p>
+				</div>
+			</article>
+			
+			<% end %>
+		</div>
+		<div class="small-12 medium-4 columns">
+			<h3 class="kategorije">Kategorije</h3>
+			<ul>
+				<% blog('blog').tags.each do |tag, articles| %>
+				<li>
+					<h5><%= tag %></h5>
+					<ul>
+						<% articles.each do |article| %>
+						<li><a href="<%= article.url %>"><%= article.title %></a></li>
+						<% end %>
+					</ul>
+				</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</section>

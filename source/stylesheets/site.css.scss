@@ -14,6 +14,10 @@ $thumbnail-shadow: none;
 /// General
 ///
 
+p {
+  color: #404040;
+}
+
 .button {
   text-transform: uppercase;
   font-weight: 400;
@@ -34,11 +38,16 @@ header {
 
   h1 {
     text-transform: uppercase;
-    font-size: rem(25);
-    padding: 0;
+    font-size: rem(16);
+    padding: .5em 0 0 0;
     margin: 0;
     font-weight: 200;
     display: block;
+
+    @include breakpoint(medium) {
+      font-size: rem(25);
+      padding: 0;
+    }
   }
 
   .city {
@@ -46,16 +55,16 @@ header {
     display: block;
   }
 
-  .hitni-telefon {
-    display: block;
-    text-align: right;
-    width: 100%;
+  .logo {
+    @include breakpoint(medium) {
+      float: left;
+    }
   }
 
-  .doniraj {
-    display: block;
-    text-align: right;
-    width: 100%;
+  .text-center {
+    @include breakpoint(medium) {
+      text-align: left;
+    }
   }
 }
 
@@ -64,13 +73,38 @@ header {
 ///
 
 .homepage {
+  margin-top: 1em;
+
+  @include breakpoint(medium) {
+    margin-top: 4em;
+  }
+
   h2 {
     font-weight: 200;
-    margin-top: 1em;
+    font-size: rem(16);
 
     @include breakpoint(medium) {
       font-size: rem(35);
-      margin-top: 2em;
+    }
+  }
+
+  h3 {
+    font-weight: 200;
+
+    @include breakpoint(medium) {
+      font-size: rem(35);
+    }
+  }
+
+  .title {
+    margin-bottom: 1em;
+    background: #f9f9f9;
+    padding: 1em 2em;
+    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+
+    @include breakpoint(medium) {
+      margin-bottom: 4em;
     }
   }
 
@@ -111,22 +145,41 @@ header {
 ///
 
 .o-nama {
+  margin-top: 1em;
+
+  @include breakpoint(medium) {
+    margin-top: 4em;
+  }
+
   h2 {
     font-weight: 200;
-    margin-top: 1em;
+    text-transform: uppercase;
+    font-size: rem(20);
+    margin: 0;
+    letter-spacing: rem(5);
 
     @include breakpoint(medium) {
-      font-size: rem(55);
+      font-size: rem(40);
     }
   }
 
   h3 {
     font-weight: 200;
-    margin-top: 1em;
 
     @include breakpoint(medium) {
       font-size: rem(35);
-      margin-top: 2em;
+    }
+  }
+
+  .title {
+    margin-bottom: 1em;
+    background: #f9f9f9;
+    padding: 1em 2em;
+    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+
+    @include breakpoint(medium) {
+      margin-bottom: 4em;
     }
   }
 }
@@ -137,12 +190,21 @@ header {
 ///
 
 .udomi {
+  margin-top: 1em;
+
+  @include breakpoint(medium) {
+    margin-top: 4em;
+  }
+
   h2 {
     font-weight: 200;
-    margin-top: 1em;
+    text-transform: uppercase;
+    font-size: rem(20);
+    margin: 0;
+    letter-spacing: rem(5);
 
     @include breakpoint(medium) {
-      font-size: rem(55);
+      font-size: rem(40);
     }
   }
 
@@ -154,8 +216,16 @@ header {
     }
   }
 
-  .bottom-margin {
+  .title {
     margin-bottom: 1em;
+    background: #f9f9f9;
+    padding: 1em 2em;
+    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+
+    @include breakpoint(medium) {
+      margin-bottom: 4em;
+    }
   }
 
   .mix {
@@ -219,12 +289,334 @@ header {
     margin-top: .3em;
   }
 
-  .info {
-
+  .bottom-margin {
+    margin-bottom: 1em;
   }
 
   .active {
     background: #1583cc;
+  }
+
+  .button-group {
+    margin-bottom: 1em;
+    margin-top: 1em;
+
+    @include breakpoint(medium) {
+      margin-bottom: 3em;
+      margin-top: 3em;
+    }
+  }
+}
+
+
+///
+/// Kontakt
+///
+
+.kontakt {
+  margin-top: 1em;
+
+  @include breakpoint(medium) {
+    margin-top: 4em;
+  }
+
+  h2 {
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: rem(20);
+    margin: 0;
+    letter-spacing: rem(5);
+
+    @include breakpoint(medium) {
+      font-size: rem(40);
+    }
+  }
+
+  h3 {
+    font-weight: 200;
+
+    @include breakpoint(medium) {
+      font-size: rem(35);
+    }
+  }
+
+  .title {
+    margin-bottom: 1em;
+    background: #f9f9f9;
+    padding: 1em 2em;
+    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+
+    @include breakpoint(medium) {
+      margin-bottom: 4em;
+    }
+  }
+}
+
+
+///
+/// Blog
+///
+
+.blog {
+  margin-top: 1em;
+
+  @include breakpoint(medium) {
+    margin-top: 4em;
+  }
+
+  h2 {
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: rem(20);
+    margin: 0;
+    letter-spacing: rem(5);
+
+    @include breakpoint(medium) {
+      font-size: rem(40);
+    }
+  }
+
+  h3 {
+    font-weight: 200;
+
+    @include breakpoint(medium) {
+      font-size: rem(35);
+    }
+  }
+
+  .title {
+    margin-bottom: 1em;
+    background: #f9f9f9;
+    padding: 1em 2em;
+    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+
+    @include breakpoint(medium) {
+      margin-bottom: 4em;
+    }
+  }
+
+  .kategorije {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+
+      h5 {
+        text-transform: uppercase;
+        margin-top: 1.2em;
+      }
+
+      ul {
+        li {
+          padding-left: 1em;
+          padding-bottom: .4em;
+          padding-top: .4em;
+          border-bottom: 1px solid $light-gray;
+
+          &:hover {
+            border-bottom: 1px solid $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  article {
+    margin-bottom: 1em;
+    border: 1px solid $light-gray;
+    border-radius: 3px;
+
+    @include breakpoint(medium) {
+      margin-bottom: 2em;
+    }
+
+    .blog-info {
+      padding: 1em;
+
+      time {
+        display: block;
+      }
+
+      .author {
+        display: block;
+      }
+    }
+
+    &:hover {
+      border: 1px solid $primary-color;
+    }
+  }
+}
+
+
+
+///
+/// Article
+///
+
+.article {
+  margin-top: 1em;
+
+  @include breakpoint(medium) {
+    margin-top: 4em;
+  }
+
+  h2 {
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: rem(20);
+    margin: 0;
+    letter-spacing: rem(5);
+
+    @include breakpoint(medium) {
+      font-size: rem(40);
+    }
+  }
+
+  h3 {
+    font-weight: 200;
+
+    @include breakpoint(medium) {
+      font-size: rem(35);
+    }
+  }
+
+  .title {
+    margin-bottom: 1em;
+    padding: 1.3em 2em;
+    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+
+    .meta {
+      color: #dadada;
+
+      time {
+        display: inline-block;
+        color: #929292;
+      }
+
+      .author {
+        display: inline-block;
+        color: #929292;
+      }
+    }
+
+    @include breakpoint(medium) {
+      margin-bottom: 4em;
+    }
+  }
+
+  
+
+  img {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+
+
+///
+/// Udomi Single
+///
+
+.udomi-single {
+  margin-top: 1em;
+
+  @include breakpoint(medium) {
+    margin-top: 4em;
+  }
+
+  h2 {
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: rem(20);
+    margin: 0;
+    letter-spacing: rem(5);
+
+    @include breakpoint(medium) {
+      font-size: rem(40);
+    }
+  }
+
+  h3 {
+    font-weight: 200;
+
+    @include breakpoint(medium) {
+      font-size: rem(35);
+    }
+  }
+
+  .title {
+    margin-bottom: 1em;
+    padding: 1.3em 2em;
+    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+
+    @include breakpoint(medium) {
+      margin-bottom: 4em;
+    }
+  }
+
+  
+
+  img {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+
+///
+/// Doniraj
+///
+
+.doniraj {
+  margin-top: 1em;
+
+  @include breakpoint(medium) {
+    margin-top: 4em;
+  }
+
+  h2 {
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: rem(20);
+    margin: 0;
+    letter-spacing: rem(5);
+
+    @include breakpoint(medium) {
+      font-size: rem(40);
+    }
+  }
+
+  h3 {
+    font-weight: 200;
+
+    @include breakpoint(medium) {
+      font-size: rem(35);
+    }
+  }
+
+  .title {
+    margin-bottom: 1em;
+    background: #f9f9f9;
+    padding: 1em 2em;
+    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+
+    @include breakpoint(medium) {
+      margin-bottom: 4em;
+    }
   }
 }
 

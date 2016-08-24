@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <%= partial 'partials/head' %>
+  <body>
+    <%= partial 'partials/header' %>
+    
+    <div class="row">
+      <div class="columns">
+        <section class="article">
+          <div class="title">
+            <h2 class="text-center"><%= current_page.data.title %></h2>
+            <div class="meta text-center">
+              <time><%= current_page.date.strftime("%d.%m.%Y.") %></time> by <span class="author"><%= current_page.data.author %></span>
+            </div>
+          </div>
+          
+          <img src="<%= current_page.data.image %>" alt="<%= current_page.data.title %>">
+          <%= yield %>
+        </section>
+      </div>
+    </div>
+    <footer>
+    </footer>
+    <%= javascript_include_tag :jquery %>
+    <%= javascript_include_tag :foundation %>
+    <%= javascript_include_tag :mixitup %>
+    <script>
+    $(document).foundation();
+    </script>
+    <%= javascript_include_tag :all %>
+    
+  </body>
+</html>

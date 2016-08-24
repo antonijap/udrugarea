@@ -24,10 +24,19 @@ configure :development do
 end
 
 activate :blog do |blog|
+  blog.prefix = "blog"
+  blog.permalink = "/{title}"
+  blog.name = "blog"
+  blog.sources = "{title}.html"
+  blog.layout = "layouts/article"
+end
+
+activate :blog do |blog|
   blog.prefix = "udomi"
   blog.permalink = "/{title}"
   blog.name = "udomi"
   blog.sources = "{title}.html"
+  blog.layout = "layouts/udomi"
 end
 
 ###

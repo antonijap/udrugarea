@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <%= partial 'partials/head' %>
+  <body>
+    <%= partial 'partials/header' %>
+    
+    <div class="row">
+      <div class="columns">
+        <section class="udomi-single">
+          <div class="title">
+            <div class="row align-justify align-middle">
+              <div class="shrink columns">
+                <h2><%= current_page.data.title %></h2>
+              </div>
+
+              <div class="columns">
+                Vrsta: <strong><%= current_page.data.category %></strong>
+                Starost: <strong><%= current_page.data.starost %></strong>
+              </div>
+            </div>
+          </div>
+          
+          <img src="<%= current_page.data.thumbnail %>" alt="<%= current_page.data.title %>">
+          <%= yield %>
+        </section>
+      </div>
+    </div>
+    <footer>
+    </footer>
+    <%= javascript_include_tag :jquery %>
+    <%= javascript_include_tag :foundation %>
+    <%= javascript_include_tag :mixitup %>
+    <script>
+    $(document).foundation();
+    </script>
+    <%= javascript_include_tag :all %>
+    
+  </body>
+</html>
