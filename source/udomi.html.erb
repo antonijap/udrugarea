@@ -1,0 +1,60 @@
+---
+title: Udruga Rea | Udomi
+---
+<section class="udomi">
+	<div class="row">
+		<div class="columns">
+			<h2>Udomi</h2>
+			<p>Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="columns">
+			<div class="button-group">
+				<a class="button filter" data-filter="all">Sve životinje</a>
+				<a class="button filter" data-filter=".pas">Psi</a>
+				<a class="button filter" data-filter=".mačka">Mačke</a>
+			</div>
+		</div>
+	</div>
+	<div class="row" id="udomi">
+		<% blog('udomi').articles.each do |article| %>
+		<a href="<%= article.url %>">
+			<div class="small-12 medium-6 large-4 bottom-margin columns mix <%= article.data.category %>">
+				<div class="item">
+					<img src="<%= article.data.thumbnail %>" alt="<%= article.title %>" class="thumbnail">
+					<div class="row text-center info align-middle">
+						<div class="small-12 columns">
+							<a href="<%= article.url %>" class="ime"><%= article.title %></a>
+						</div>
+						<div class="small-12 columns text-left">
+
+							<% if article.data.kastracija %>
+							<span class="kastracija">Kastracija: <i class="fa fa-check" aria-hidden="true"></i></span>
+							<% else %>
+							<span class="kastracija">Kastracija: <i class="fa fa-times" aria-hidden="true"></i></span>
+							<% end %>
+
+
+							<% if article.data.friendliness == true %>
+							<span class="friendliness">Može s drugim životinjama: <i class="fa fa-check" aria-hidden="true"></i></span>
+
+							<% elsif article.data.friendliness == "unknown" %>
+							<span class="friendliness">Može s drugim životinjama: <span class="float-right">--</span></span>
+
+							<% elsif article.data.friendliness == false %>
+							<span class="friendliness">Može s drugim životinjama: <i class="fa fa-times" aria-hidden="true"></i></span>
+
+							<% else %>
+							<% end %>
+
+
+							<span class="starost">Starost: <spa class="float-right"n><%= article.data.starost %></span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+			<% end %>
+		</div>
+	</section>

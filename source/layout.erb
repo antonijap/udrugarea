@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Udruga Rea" %></title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <%= stylesheet_link_tag :site %>
+  </head>
+  <body>
+    <header>
+      <div class="row align-middle">
+        <div class="columns">
+          <div class="row align-middle">
+            <div class="shrink columns">
+              <a href="/"><img src="http://dev.antonijapek.com/images/logo.png" alt="logo"></a>
+            </div>
+            <div class="columns">
+              <h1>Udruga Rea</h1>
+              <span class="city">Samobor</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns">
+          <ul class="menu align-right">
+            <li><a href="/o-nama/">O nama</a></li>
+            <li><a href="/udomi/">Udomi</a></li>
+            <li><a href="/kontakt/">Kontakt</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+          <span class="float-right hitni-telefon">Hitni telefon <span class="monospace">092 123 456</span></span>
+          <span class="float-right doniraj">Doniraj <span class="monospace">IBAN HR6024030091121002275</span></span>
+        </div>
+      </div>
+    </header>
+    <%= yield %>
+
+    <footer>
+
+    </footer>
+
+    <%= javascript_include_tag :jquery %>
+    <%= javascript_include_tag :foundation %>
+    <%= javascript_include_tag :mixitup %>
+    <%= javascript_include_tag :all %>
+
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

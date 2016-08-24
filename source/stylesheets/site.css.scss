@@ -1,0 +1,237 @@
+$orbit-caption-background: rgba(255, 255, 255, 0.91);
+$orbit-bullet-diameter: .5rem;
+
+$button-radius: 3px;
+
+$thumbnail-border: none;
+$thumbnail-shadow: none;
+
+@import "foundation";
+@import "motion-ui/motion-ui";
+@import "bourbon/bourbon";
+
+///
+/// General
+///
+
+.button {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.monospace {
+  font-family: 'Inconsolata', monospace;
+  background: #f3f3f3;
+  padding: .1em .2em;
+}
+
+///
+/// Header
+///
+
+header {
+  margin: 1em auto;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: rem(25);
+    padding: 0;
+    margin: 0;
+    font-weight: 200;
+    display: block;
+  }
+
+  .city {
+    font-weight: 700;
+    display: block;
+  }
+
+  .hitni-telefon {
+    display: block;
+    text-align: right;
+    width: 100%;
+  }
+
+  .doniraj {
+    display: block;
+    text-align: right;
+    width: 100%;
+  }
+}
+
+///
+/// Homepage
+///
+
+.homepage {
+  h2 {
+    font-weight: 200;
+    margin-top: 1em;
+
+    @include breakpoint(medium) {
+      font-size: rem(35);
+      margin-top: 2em;
+    }
+  }
+
+  .orbit {
+    margin-bottom: 1em;
+
+    @include breakpoint(medium) {
+      margin-bottom: 3em;
+    }
+
+    .orbit-caption {
+      text-align: center;
+
+      .button {
+        margin: 0 0 .1em 0;
+        font-size: rem(16);
+        padding: .4em .4em .3em .4em;
+      }
+
+      @include breakpoint(medium) {
+        font-size: rem(25);
+        font-weight: 200;
+        padding-bottom: 1em;
+        padding-top: 1em;
+
+        .button {
+          margin: 0 0 .3em 0;
+          font-size: rem(16);
+          padding: .4em .4em .3em .4em;
+        }
+      }
+    }
+  }
+}
+
+///
+/// O nama
+///
+
+.o-nama {
+  h2 {
+    font-weight: 200;
+    margin-top: 1em;
+
+    @include breakpoint(medium) {
+      font-size: rem(55);
+    }
+  }
+
+  h3 {
+    font-weight: 200;
+    margin-top: 1em;
+
+    @include breakpoint(medium) {
+      font-size: rem(35);
+      margin-top: 2em;
+    }
+  }
+}
+
+
+///
+/// Udomi
+///
+
+.udomi {
+  h2 {
+    font-weight: 200;
+    margin-top: 1em;
+
+    @include breakpoint(medium) {
+      font-size: rem(55);
+    }
+  }
+
+  h3 {
+    font-weight: 200;
+
+    @include breakpoint(medium) {
+      font-size: rem(35);
+    }
+  }
+
+  .bottom-margin {
+    margin-bottom: 1em;
+  }
+
+  .mix {
+    display: none;
+  }
+
+  .item {
+    border: 1px solid #b8d9ef;
+    border-radius: 3px;
+
+    &:hover {
+      border: 1px solid $primary-color;
+    }
+  }
+
+  .thumbnail {
+    width: 100%;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .ime {
+    font-size: rem(25);
+    line-height: 28px;
+    display: block;
+    margin-top: .6em;
+    margin-bottom: .6em;
+    color: black;
+  }
+
+  .kastracija {
+    display: block;
+    padding: .5em 1em;
+    border-top: 1px solid #b8d9ef;
+    border-bottom: 1px solid #b8d9ef;
+    color: $primary-color;
+  }
+
+  .starost {
+    display: block;
+    padding: .5em 1em;
+    color: $primary-color;
+  }
+
+  .friendliness {
+    display: block;
+    padding: .5em 1em;
+    border-bottom: 1px solid #b8d9ef;
+    color: $primary-color;
+  }
+
+  .fa-check {
+    color: $primary-color;
+    float: right;
+    margin-top: .3em;
+  }
+
+  .fa-times {
+    color: $primary-color;
+    float: right;
+    margin-top: .3em;
+  }
+
+  .info {
+
+  }
+
+  .active {
+    background: #1583cc;
+  }
+}
+
+///
+/// Footer
+///
+
+footer {
+  height: 10rem;
+}
