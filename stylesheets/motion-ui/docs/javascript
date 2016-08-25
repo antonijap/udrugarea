@@ -1,0 +1,36 @@
+<h1 id="javascript">JavaScript</h1>
+
+<p>Motion UI includes a small JavaScript library that can play transitions, although this specific library is not required to take advantage of Motion UI's CSS. Animating in reveals a hidden element, while animating out hides a visible element.</p>
+
+<p>The library is available on <code>window.MotionUI</code>, or can imported with a module system.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>The <code>MotionUI</code> object has two methods: <code>animateIn()</code> and <code>animateOut()</code>. Both functions take three parameters:</p>
+
+<ul>
+  <li><code>element</code>: a DOM element to animate.</li>
+  <li><code>animation</code>: a transition class to use.</li>
+  <li><code>cb</code> (optional): a callback to run when the transition finishes. Within the callback, the value of <code>this</code> is the DOM element that was transitioned.</li>
+</ul>
+
+<p>Here's an example:</p>
+
+<p>```js
+var $elem = $('[data-animate]');</p>
+
+<p>MotionUI.animateIn($elem, 'slide-in', function() {
+  console.log('Transition finished!');
+});
+```</p>
+
+<p>What about animations? Those can be triggered just by adding the animation class to an element. Here are examples with plain JavaScript and with jQuery:</p>
+
+<p>```js
+// Plain JavaScript (IE10+)
+document.querySelector('.animating-thing').classList.add('wiggle');</p>
+
+<p>// jQuery
+$('.animating-thing').addClass('wiggle');
+```</p>
+

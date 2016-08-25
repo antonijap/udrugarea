@@ -1,0 +1,33 @@
+<h1 id="wowjs-integration">WOW.js Integration</h1>
+
+<p>Motion UI can be paired with <a href="http://mynameismatthieu.com/WOW/">WOW.js</a> to trigger animations as elements scroll into view. <strong><a href="http://codepen.io/gakimball/pen/WrKRRy">Here's a CodePen that illustrates the concepts below</a></strong>.</p>
+
+<p>To start, load the JavaScript for WOW.js. The quickest way to do this is by loading from a CDN:</p>
+
+<p><code>html
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"&gt;&lt;/script&gt;
+</code></p>
+
+<p>Next, in your main JavaScript file, initialize WOW:</p>
+
+<p><code>js
+var wow = new WOW();
+wow.init();
+</code></p>
+
+<p>Lastly, we need animation classes to add to elements. Because Motion UI is a transition-focused library, there aren't many animation classes that come out of the box. The built-in animation classes are <code>.wiggle</code>, <code>.shake</code>, <code>.spin-cw</code>, and <code>.spin-ccw</code>. However, creating out own animation class using any of the transition effects is easy, using Motion UI's Sass mixins.</p>
+
+<p>Here's a basic fade class. Refer to the <a href="animations.md">documentation on animations</a> to learn more about how animations are built.</p>
+
+<p><code>scss
+.animate-fade-in {
+  @include mui-animation(fade);
+}
+</code></p>
+
+<p>Now we can apply this class to any element. We also add the class <code>.wow</code>, so WOW knows which elements to target as the page scrolls.</p>
+
+<p><code>html
+&lt;img class="wow animate-fade-in" src="//placekitten.com/300/300"&gt;
+</code></p>
+

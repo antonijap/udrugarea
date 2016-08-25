@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<!-- Use title if it's in the page YAML frontmatter -->
+	<title>Udruga Rea | Kontakt</title>
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata&subset=latin-ext" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link href="/stylesheets/site.css" rel="stylesheet" />
+</head>
+  <body>
+    <header>
+  <div class="row align-middle align-justify">
+    <div class="columns">
+      <div class="row align-middle align-center logo">
+        <div class="shrink columns">
+          <a href="/"><img src="/images/logo.png" alt="logo"></a>
+        </div>
+        <div class="shrink columns text-center">
+          <h1>Udruga Rea</h1>
+          <span class="city">Samobor</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="row">
+        <div class="small-12 columns">
+
+            <ul class="vertical medium-horizontal menu align-right">
+              <li><a href="/o-nama/">O nama</a></li>
+              <li><a href="/udomi/">Udomi</a></li>
+              <li><a href="/kontakt/">Kontakt</a></li>
+              <li><a href="/blog/">Blog</a></li>
+            </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    
+    <section class="kontakt">
+	<div class="expanded row title">
+		<div class="columns">
+			<h2 class="text-center">Kontakt</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			</p>
+		</div>
+
+		<div class="columns">
+			<form action="https://formspree.io/ipekica@gmail.com" method="POST" data-abide novalidate>
+				<div class="row">
+					<div class="medium-6 columns">
+						<label>
+							Ime
+							<input type="text" name="name" required>
+							<span class="form-error">
+								Ime je obavezno, molimo te da ga napišeš.
+							</span>
+						</label>
+					</div>
+					<div class="medium-6 columns">
+						<label>
+							Email
+							<input type="email" name="_replyto" required>
+							<span class="form-error">
+								Email je obavezan, molimo te da ga napišeš.
+							</span>
+						</label>
+					</div>
+					<div class="medium-12 columns">
+						<label>
+							Poruka
+							<textarea required></textarea>
+							<span class="form-error">
+								Poruka je obavezna, molimo te da ju napišeš.
+							</span>
+						</label>
+					</div>
+				</div>
+				<input type="submit" value="Send" class="button">
+				<input type="hidden" name="_subject" value="Kontakt forma sa weba" />
+				<input type="text" name="_gotcha" style="display:none" />
+			</form>
+			<div data-abide-error class="alert callout" style="display: none;">
+				<p><i class="fi-alert"></i> Ups, probaj ispočetka.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+    <footer>
+
+    </footer>
+
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/foundation.js"></script>
+    <script src="/javascripts/mixitup.js"></script>
+
+    <script>
+      $(document).foundation();
+    </script>
+
+    <script src="/javascripts/all.js"></script>
+
+    
+  </body>
+</html>
