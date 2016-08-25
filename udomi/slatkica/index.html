@@ -118,16 +118,19 @@
   <p>
     Pošalji nam svoj kontakt broj pa ćemo ti se javiti.
   </p>
-  <form action="https://formspree.io/developer.udrugarea@gmail.com" method="POST">
+  <form action="https://formspree.io/developer.udrugarea@gmail.com" method="POST" data-abide="" novalidate="">
   <div class="row">
     <div class="small-12 columns">
       <label>Broj telefona
-        <input type="text" placeholder="" name="telefon" />
+        <input type="text" placeholder="" name="telefon" required="" pattern="number" />
       </label>
     </div>
   </div>
   <div class="small-12 columns">
     <input class="expanded button" type="submit" value="Send" />
+  </div>
+  <div data-abide-error="" class="alert callout" style="display: none;">
+    <p><i class="fi-alert"></i>Ups, nešto nije dobro s brojem, probaj bez razmaka/crtice i sl.</p>
   </div>
 </form>
 </div>
