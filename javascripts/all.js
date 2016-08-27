@@ -1,1 +1,1 @@
-$(function(){$("#udomi").mixItUp(),$(document).bind("invalid.zf.abide",function(i){console.log("Sorry, "+i.target.id+" is not valid")})});
+$(function(){$("#udomi").mixItUp()});
