@@ -3,12 +3,10 @@
   <%= partial 'partials/head' %>
   <body>
     <%= partial 'partials/header' %>
-    
+
     <%= yield %>
 
-    <footer>
-
-    </footer>
+    <%= partial 'partials/footer' %>
 
     <%= javascript_include_tag :jquery %>
     <%= javascript_include_tag :foundation %>
@@ -18,8 +16,10 @@
       $(document).foundation();
     </script>
 
+    <%= partial 'partials/analytics' %>
+
     <%= javascript_include_tag :all %>
 
-    
+
   </body>
 </html>

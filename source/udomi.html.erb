@@ -1,5 +1,5 @@
 ---
-title: Udruga Rea | Udomi
+title: Udomi
 ---
 <section class="udomi">
 	<div class="expanded row title">
@@ -10,7 +10,7 @@ title: Udruga Rea | Udomi
 	<div class="row align-center">
 		<div class="small-12 columns">
 			<p>
-				Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.
+				Ovdje možete vidjeti naše predivne peseke i mace. Kako bismo osigurali maksimalno adekvatan novi dom za naše štićenike pripremili smo ugovor koji se potpisuje prilikom udomljavanja. Slobodno filtiraj peseke ili mace i ponađi svog novog najboljeg prijatelja. Ukoliko imaš bilo kakva pitanja slobodno <a href="/kontakt/">nam se javi</a>.
 			</p>
 		</div>
 		<div class="shrink columns">
@@ -21,6 +21,7 @@ title: Udruga Rea | Udomi
 			</div>
 		</div>
 	</div>
+
 	<div class="row" id="udomi">
 		<% blog('udomi').articles.each do |article| %>
 		<a href="<%= article.url %>">
@@ -34,9 +35,17 @@ title: Udruga Rea | Udomi
 						<div class="small-12 columns text-left">
 
 							<% if article.data.kastracija %>
-							<span class="kastracija">Kastracija: <i class="fa fa-check" aria-hidden="true"></i></span>
+								<% if article.data.spol == "ž" %>
+								  <span class="kastracija">Sterilizirana: <i class="fa fa-check" aria-hidden="true"></i></span>
+								<% else %>
+									<span class="kastracija">Kastriran: <i class="fa fa-check" aria-hidden="true"></i></span>
+								<% end %>
 							<% else %>
-							<span class="kastracija">Kastracija: <i class="fa fa-times" aria-hidden="true"></i></span>
+								<% if article.data.spol == "ž" %>
+									<span class="kastracija">Sterilizirana: <i class="fa fa-times" aria-hidden="true"></i></span>
+								<% else %>
+									<span class="kastracija">Kastriran: <i class="fa fa-times" aria-hidden="true"></i></span>
+								<% end %>
 							<% end %>
 
 
@@ -44,7 +53,7 @@ title: Udruga Rea | Udomi
 							<span class="friendliness">Može s drugim životinjama: <i class="fa fa-check" aria-hidden="true"></i></span>
 
 							<% elsif article.data.friendliness == "unknown" %>
-							<span class="friendliness">Može s drugim životinjama: <span class="float-right">--</span></span>
+							<span class="friendliness">Može s drugim životinjama: <span class="float-right"><i class="fa fa-question" aria-hidden="true"></i></span></span>
 
 							<% elsif article.data.friendliness == false %>
 							<span class="friendliness">Može s drugim životinjama: <i class="fa fa-times" aria-hidden="true"></i></span>

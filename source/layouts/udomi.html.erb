@@ -3,37 +3,73 @@
   <%= partial 'partials/head' %>
   <body>
     <%= partial 'partials/header' %>
-    
+
     <div class="row">
       <div class="columns">
         <section class="udomi-single">
           <div class="title">
-            <div class="row align-justify align-middle">
-              <div class="shrink columns">
+            <div class="row align-middle">
+              <div class="columns text-center">
                 <h2><%= current_page.data.title %></h2>
               </div>
 
-              <div class="columns">
-                Vrsta: <strong><%= current_page.data.category %></strong>
-                Starost: <strong><%= current_page.data.starost %></strong>
+              <div class="shrink columns">
+                <a class="button float-right" data-open="udomi-forma">Želim udomiti</a>
               </div>
             </div>
           </div>
-          
-          <img src="<%= current_page.data.thumbnail %>" alt="<%= current_page.data.title %>">
+
+          <div class="row text-center info">
+            <div class="small-12 medium-3 columns">
+              <span class="category">Vrsta: <strong class="blue"><%= current_page.data.category %></strong></span>
+            </div>
+
+            <div class="small-12 medium-3 columns">
+              <% if current_page.data.kastracija %>
+                <% if current_page.data.spol == "ž" %>
+                  <span class="kastracija">Sterilizirana: <i class="fa fa-check blue" aria-hidden="true"></i></span>
+                <% else %>
+                  <span class="kastracija">Kastriran: <i class="fa fa-check blue" aria-hidden="true"></i></span>
+                <% end %>
+              <% else %>
+                <% if current_page.data.spol == "ž" %>
+                  <span class="kastracija">Sterilizirana: <i class="fa fa-times blue" aria-hidden="true"></i></span>
+                <% else %>
+                  <span class="kastracija">Kastriran: <i class="fa fa-times blue" aria-hidden="true"></i></span>
+                <% end %>
+              <% end %>
+            </div>
+
+            <div class="small-12 medium-3 columns">
+              <% if current_page.data.friendliness == true %>
+              <span class="friendliness">Može s drugim životinjama: <i class="fa fa-check blue" aria-hidden="true"></i></span>
+
+              <% elsif current_page.data.friendliness == "unknown" %>
+              <span class="friendliness">Može s drugim životinjama: <i class="fa fa-question blue" aria-hidden="true"></i></span>
+
+              <% elsif current_page.data.friendliness == false %>
+              <span class="friendliness">Može s drugim životinjama: <i class="fa fa-times blue" aria-hidden="true"></i></span>
+              <% end %>
+            </div>
+
+            <div class="small-12 medium-3 columns">
+              <span class="starost">Starost: <strong class="blue"><%= current_page.data.starost %></strong></span>
+            </div>
+          </div>
+
           <%= yield %>
         </section>
       </div>
     </div>
-    <footer>
-    </footer>
+    <%= partial 'partials/footer' %>
     <%= javascript_include_tag :jquery %>
     <%= javascript_include_tag :foundation %>
     <%= javascript_include_tag :mixitup %>
     <script>
     $(document).foundation();
     </script>
+    <%= partial 'partials/analytics' %>
     <%= javascript_include_tag :all %>
-    
+
   </body>
 </html>

@@ -6,6 +6,12 @@ $button-radius: 3px;
 $thumbnail-border: none;
 $thumbnail-shadow: none;
 
+$title-background: #efefef;
+$title-border: #e6e6e6;
+
+$title-font: 'Oswald', sans-serif;
+$subtitle-font: 'Oswald', sans-serif;
+
 @import "foundation";
 @import "motion-ui/motion-ui";
 @import "bourbon/bourbon";
@@ -13,6 +19,11 @@ $thumbnail-shadow: none;
 ///
 /// General
 ///
+
+.spacer {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
 p {
   color: #404040;
@@ -82,6 +93,7 @@ header {
   h2 {
     font-weight: 200;
     font-size: rem(16);
+    font-family: $title-font;
 
     @include breakpoint(medium) {
       font-size: rem(35);
@@ -98,10 +110,10 @@ header {
 
   .title {
     margin-bottom: 1em;
-    background: #f9f9f9;
+    background: $title-background;
     padding: 1em 2em;
-    border-bottom: 1px solid #f1f1f1;
-    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid $title-border;
+    border-top: 1px solid $title-border;
 
     @include breakpoint(medium) {
       margin-bottom: 4em;
@@ -157,6 +169,7 @@ header {
     font-size: rem(20);
     margin: 0;
     letter-spacing: rem(5);
+    font-family: $title-font;
 
     @include breakpoint(medium) {
       font-size: rem(40);
@@ -165,6 +178,7 @@ header {
 
   h3 {
     font-weight: 200;
+    font-family: $subtitle-font;
 
     @include breakpoint(medium) {
       font-size: rem(35);
@@ -173,10 +187,10 @@ header {
 
   .title {
     margin-bottom: 1em;
-    background: #f9f9f9;
+    background: $title-background;
     padding: 1em 2em;
-    border-bottom: 1px solid #f1f1f1;
-    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid $title-border;
+    border-top: 1px solid $title-border;
 
     @include breakpoint(medium) {
       margin-bottom: 4em;
@@ -202,6 +216,7 @@ header {
     font-size: rem(20);
     margin: 0;
     letter-spacing: rem(5);
+    font-family: $title-font;
 
     @include breakpoint(medium) {
       font-size: rem(40);
@@ -210,6 +225,7 @@ header {
 
   h3 {
     font-weight: 200;
+    font-family: $subtitle-font;
 
     @include breakpoint(medium) {
       font-size: rem(35);
@@ -218,10 +234,10 @@ header {
 
   .title {
     margin-bottom: 1em;
-    background: #f9f9f9;
+    background: $title-background;
     padding: 1em 2em;
-    border-bottom: 1px solid #f1f1f1;
-    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid $title-border;
+    border-top: 1px solid $title-border;
 
     @include breakpoint(medium) {
       margin-bottom: 4em;
@@ -326,6 +342,7 @@ header {
     font-size: rem(20);
     margin: 0;
     letter-spacing: rem(5);
+    font-family: $title-font;
 
     @include breakpoint(medium) {
       font-size: rem(40);
@@ -334,18 +351,26 @@ header {
 
   h3 {
     font-weight: 200;
+    font-family: $subtitle-font;
 
     @include breakpoint(medium) {
       font-size: rem(35);
     }
   }
 
+  textarea {
+    min-height: 6em;
+    @include breakpoint(medium) {
+      min-height: 14em;
+    }
+  }
+
   .title {
     margin-bottom: 1em;
-    background: #f9f9f9;
+    background: $title-background;
     padding: 1em 2em;
-    border-bottom: 1px solid #f1f1f1;
-    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid $title-border;
+    border-top: 1px solid $title-border;
 
     @include breakpoint(medium) {
       margin-bottom: 4em;
@@ -371,6 +396,7 @@ header {
     font-size: rem(20);
     margin: 0;
     letter-spacing: rem(5);
+    font-family: $title-font;
 
     @include breakpoint(medium) {
       font-size: rem(40);
@@ -379,6 +405,7 @@ header {
 
   h3 {
     font-weight: 200;
+    font-family: $subtitle-font;
 
     @include breakpoint(medium) {
       font-size: rem(35);
@@ -387,10 +414,10 @@ header {
 
   .title {
     margin-bottom: 1em;
-    background: #f9f9f9;
+    background: $title-background;
     padding: 1em 2em;
-    border-bottom: 1px solid #f1f1f1;
-    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid $title-border;
+    border-top: 1px solid $title-border;
 
     @include breakpoint(medium) {
       margin-bottom: 4em;
@@ -399,7 +426,7 @@ header {
 
   .kategorije {
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1.6em;
     font-weight: 700;
   }
 
@@ -476,6 +503,7 @@ header {
     font-size: rem(20);
     margin: 0;
     letter-spacing: rem(5);
+    font-family: $title-font;
 
     @include breakpoint(medium) {
       font-size: rem(40);
@@ -484,6 +512,7 @@ header {
 
   h3 {
     font-weight: 200;
+    font-family: $subtitle-font;
 
     @include breakpoint(medium) {
       font-size: rem(35);
@@ -493,8 +522,8 @@ header {
   .title {
     margin-bottom: 1em;
     padding: 1.3em 2em;
-    border-bottom: 1px solid #f1f1f1;
-    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid $title-border;
+    border-top: 1px solid $title-border;
 
     .meta {
       color: #dadada;
@@ -515,7 +544,7 @@ header {
     }
   }
 
-  
+
 
   img {
     margin-top: 1em;
@@ -542,6 +571,8 @@ header {
     font-size: rem(20);
     margin: 0;
     letter-spacing: rem(5);
+    font-family: $title-font;
+    color: $primary-color;
 
     @include breakpoint(medium) {
       font-size: rem(40);
@@ -550,6 +581,7 @@ header {
 
   h3 {
     font-weight: 200;
+    font-family: $subtitle-font;
 
     @include breakpoint(medium) {
       font-size: rem(35);
@@ -559,15 +591,27 @@ header {
   .title {
     margin-bottom: 1em;
     padding: 1.3em 2em;
-    border-bottom: 1px solid #f1f1f1;
-    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid $title-border;
+    border-top: 1px solid $title-border;
+  }
 
-    @include breakpoint(medium) {
-      margin-bottom: 4em;
+  .info {
+    .columns {
+      border-right: 1px solid $light-gray;
+
+      &:last-child {
+        border-right: none;
+      }
     }
   }
 
-  
+  .button {
+    margin-bottom: 0;
+  }
+
+  .blue {
+    color: $primary-color;
+  }
 
   img {
     margin-top: 1em;
@@ -593,6 +637,7 @@ header {
     font-size: rem(20);
     margin: 0;
     letter-spacing: rem(5);
+    font-family: $title-font;
 
     @include breakpoint(medium) {
       font-size: rem(40);
@@ -601,6 +646,7 @@ header {
 
   h3 {
     font-weight: 200;
+    font-family: $subtitle-font;
 
     @include breakpoint(medium) {
       font-size: rem(35);
@@ -609,21 +655,42 @@ header {
 
   .title {
     margin-bottom: 1em;
-    background: #f9f9f9;
+    background: $title-background;
     padding: 1em 2em;
-    border-bottom: 1px solid #f1f1f1;
-    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid $title-border;
+    border-top: 1px solid $title-border;
 
     @include breakpoint(medium) {
       margin-bottom: 4em;
     }
   }
+
+  .iban {
+    padding: .1em .3em;
+    background: $light-gray;
+    font-family: "Inconsolata", sans-serif;
+  }
+
+  .bigger-font {
+    font-size: 1.5em;
+  }
 }
+
 
 ///
 /// Footer
 ///
 
 footer {
-  height: 10rem;
+  margin-top: 1em;
+  border-top: 1px solid $light-gray;
+  padding-top: 1em;
+
+  small {
+    display: block;
+  }
+
+  @include breakpoint(medium) {
+    margin-top: 3em;
+  }
 }

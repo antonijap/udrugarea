@@ -1,5 +1,5 @@
 ---
-title: Udruga Rea | Blog
+title: Blog
 ---
 <section class="blog">
 	<div class="expanded row title">
@@ -10,7 +10,7 @@ title: Udruga Rea | Blog
 	<div class="row">
 		<div class="columns">
 			<% blog('blog').articles.each do |article| %>
-			
+
 			<article>
 				<a href="<%= article.url %>"><img src="<%= article.data.image %>" alt="<%= article.title %>"></a>
 				<div class="blog-info">
@@ -22,7 +22,7 @@ title: Udruga Rea | Blog
 					</p>
 				</div>
 			</article>
-			
+
 			<% end %>
 		</div>
 		<div class="small-12 medium-4 columns">
